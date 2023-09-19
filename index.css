@@ -1,0 +1,8 @@
+body {
+    background-image: url("Background/Hexagon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+}
