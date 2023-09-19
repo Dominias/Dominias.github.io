@@ -26,15 +26,18 @@ body::-webkit-scrollbar {
 }
 
 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
 
 button {
-    background-color: rgb(60, 153, 163);
     display: flex;
     justify-content: center;
-    padding: 10px;
     align-items: center;
+    padding: 10px;
+    background-color: rgb(60, 153, 163);
     font-size: 45px;
     color: rgb(255, 255, 255);
     text-shadow:
@@ -61,13 +64,16 @@ p {
     align-items: center;
     
     font-size: 35px;
+
+    margin-left: 175px;
+    margin-right: 175px;
 }
 
 h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: xx_large;
     color: rgb(255, 215, 170);
     text-shadow:
     1px  1px 1px #000,
@@ -84,7 +90,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 5vw;
     color: rgb(255, 255, 255);
     text-shadow:
     1px  1px 1px #000,
@@ -102,11 +108,17 @@ img {
     justify-content: center;
     align-items: center;
 
-    height: 115px;
-    width: 115px;
+    object-fit: scale-down;
+    height: 75%;
+    width: 75%;
 }
 
 .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     height: 100vh;
 }
 
