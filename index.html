@@ -7,7 +7,47 @@
 </head>
 
 <body>
+    <div class="section" id="home" data-label="Home"></div>
+    <div class="section" id="about_me" data-label="About Me"></div>
+    <div class="section" id="contact_me" data-label="Contact Me"></div>
 
+    <script>
+        /// Selects all of the section divs, creates 'nav' elements for them, and puts them in an array that is created in html.
+        function activateNavigation() {
+            const sections = document.querySelectorAll(".section");
+            const navs = document.createElement("nav");
+            const navItems = Array.from(sections).map(section => {
+                return `
+                    <div class="nav_item" data_for_section="${section.id}">
+                        <a href="#${section.id}" class="nav_link"></a>
+                        <span class="nav_label">${section.dataset.label}</span>
+                    </div>
+                `;
+            });
+
+            navs.classList.add("nav")
+            navs.innerHTML = navItems.join("")
+
+            const observer = new IntersectionObserver(entries => {
+                document.querySelectorAll(".nav_link").forEach(navLink => {
+                    navLink.classList.remove("nav_link_selected");
+                });
+
+                const visibleSection = entries.filter(entry => entry.isIntersecting)[0];
+
+                document.querySelector(`.nav_item[data_for_section="${visibleSection.target.id}"] .nav_link`).classList.add("nav_link_selected");
+
+            }, {threshold: 0.5 });
+
+            sections.forEach(section => observer.observe(section));
+
+            document.body.appendChild(navs);
+
+        }   
+
+        activateNavigation();
+
+    </script>
 </body>
 
 </html>
