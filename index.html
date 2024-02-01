@@ -2,24 +2,24 @@
 
 <html>
     <head>
-        <title>Portfolio</title>
+        <title>Home</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
     </head>
 
     <body>
         <div class="section" id="home" data-label="Home">
-            <h3>Portfolio</h3>
-            <h1>William Ridenhour</h1>
-            <p>Hello! My name is William Ridenhour.
-            I am a computer science major and senior at George Mason University.
-            I designed this page to work on all devices, try it out!    </p>
-            <a href="projects.html"><button>Projects</button></a>
+            <h2>WILLIAM RIDENHOUR</h2>
+            <h1>FULL STACK DEVELOPER AND SOFTWARE ENGINEER</h1>
+            <p>I am a computer science major and senior at George Mason University.
+            I enjoy programming games using the Unity Engine and developing 3D environments and lighting.
+            </p>
+            <a href="projects.html"><button>Portfolio</button></a>  
         </div>
 
         <div class="section" id="about" data-label="About Me">
-            <h1>About Me</h1>
-            <p>
+            <h3>About Me</h3>
+            <div class="images">
                 <img src="Images/css_icon.png"></img>
                 <img src="Images/html_icon.png"></img>
                 <img src="Images/js_icon.png"></img>
@@ -28,24 +28,21 @@
                 <img src="Images/python_icon.png"></img>
                 <img src="Images/csharp_icon.png"></img>
                 <img src="Images/c_icon.png"></img>
-            </images>
-            <p>My hobbies are programming, video gaming, game design, and creative writing.
-            I have experience with Java, C, and Python, as well as C# with Unity.
-            I have full-stack web development skills comprised of JavaScript, HTML, CSS, and React.</p>
+            </div>
+            <p>The languages I am experienced in are Java, C, C#, and Python.
+            I have full-stack web development skills in JavaScript, HTML, CSS, Django, and React.</p>
         </div>
 
         <div class="section" id="contact" data-label="Contact Me">
-            <h1>Contact Me</h1>
-            <images>
+            <h3>Contact Me</h3>
+            <div>
                 <a href="https://www.linkedin.com/in/wdridenhour"><img src="Images/linkedin_icon.png"></img></a>
 
-                <a href="https://github.com/Dominias/dominias.github.io"><img src="Images/github_icon.png"></a>
+                <a href="https://github.com/Dominias/dominias.github.io"><img src="Images/github_icon.png"></img></a>
 
-                <a href="mailto:williamridenhourprofessional@gmail.com"><img src="Images/gmail_icon.png"></a>
-            </images>
+                <a href="mailto:williamridenhourprofessional@gmail.com"><img src="Images/gmail_icon.png"></img></a>
+            </div>
         </div>
-
-        <a href="https://www.vecteezy.com"><h2>Background art from vecteezy.com</h2></a>
     </body>
 
     <script>
@@ -79,7 +76,6 @@
             sections.forEach(section => observer.observe(section));
     
             document.body.appendChild(navs);
-    
         }   
     
         activateNavigation();
